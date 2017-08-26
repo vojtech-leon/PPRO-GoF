@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles
+ Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">  
+ 
+<tiles-definitions>  
+  
+   <!-- Base Definition -->
+   <definition name="base-definition"
+       template="/WEB-INF/tiles/layouts/defaultLayout.jsp">  
+       <put-attribute name="title" value="" />  
+       <put-attribute name="header" value="/WEB-INF/tiles/template/defaultHeader.jsp" />  
+       <put-attribute name="menu" value="/WEB-INF/tiles/template/defaultMenu.jsp" />  
+       <put-attribute name="body" value="" />  
+       <put-attribute name="footer" value="/WEB-INF/tiles/template/defaultFooter.jsp" />  
+   </definition>  
+  
+   <!-- Home Page -->
+   <definition name="home" extends="base-definition">  
+       <put-attribute name="title" value="Informace o hře Game of Flags" />  
+       <put-attribute name="body" value="/WEB-INF/views/home.jsp" />  
+   </definition>  
+   
+   <!-- Flags Page -->
+   <definition name="flags" extends="base-definition">  
+       <put-attribute name="title" value="Vše o vlajkách" />  
+       <put-attribute name="body" value="/WEB-INF/views/flags.jsp" />  
+   </definition>
+   
+    <!-- Flag Details Page -->
+   <definition name="flagDetails" extends="base-definition">  
+       <put-attribute name="title" value="Detail vlajky" />  
+       <put-attribute name="body" value="/WEB-INF/views/flagDetails.jsp" />  
+   </definition>
+   
+      <!-- Fractions Page -->
+   <definition name="fractions" extends="base-definition">  
+       <put-attribute name="title" value="Vše o frakcích" />  
+       <put-attribute name="body" value="/WEB-INF/views/fractions.jsp" />  
+   </definition>
+   
+   <!-- Players Page -->
+   <definition name="players" extends="base-definition">  
+       <put-attribute name="title" value="Výpis hráčů" />  
+       <put-attribute name="body" value="/WEB-INF/views/players.jsp" />  
+   </definition>
+   
+    <!-- Flags - admin Page -->
+   <definition name="adminFlags" extends="base-definition">  
+       <put-attribute name="title" value="admin" />  
+       <put-attribute name="body" value="/WEB-INF/views/adminFlags.jsp" />  
+   </definition>
+   
+    <!-- Login Page -->
+   <definition name="login" extends="base-definition">  
+       <put-attribute name="title" value="Přihlášení uživatele" />  
+       <put-attribute name="body" value="/WEB-INF/views/login.jsp" />  
+   </definition>
+   
+    <!-- Denied Page -->
+   <definition name="403" extends="base-definition">  
+       <put-attribute name="title" value="Přístup odepřen" />  
+       <put-attribute name="body" value="/WEB-INF/views/403.jsp" /> 
+   </definition>
+   
+       <!-- Scans Page -->
+   <definition name="scans" extends="base-definition">  
+       <put-attribute name="title" value="Výpis scanů" />  
+       <put-attribute name="body" value="/WEB-INF/views/scans.jsp" /> 
+   </definition>
+   
+   <!-- Scan Details Page -->
+   <definition name="scanDetails" extends="base-definition">  
+       <put-attribute name="title" value="Detail scanu" />  
+       <put-attribute name="body" value="/WEB-INF/views/scanDetails.jsp" />  
+   </definition>
+  
+  
+</tiles-definitions>
